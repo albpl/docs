@@ -19,5 +19,5 @@ Documentation for the ALB Programming Language
 Key:
 ![released version](https://img.shields.io/badge/released-brightgreen.svg) ![in progress version](https://img.shields.io/badge/in%20progress-orange.svg) ![planned version](https://img.shields.io/badge/planned-red.svg) ![withdrawn version](https://img.shields.io/badge/withdrawn-gray.svg)
 - ![0.0.1](https://img.shields.io/badge/0.0.1-brightgreen.svg): Initial release (stdout, variables, README.md, MIT License)
-- ![0.0.2](https://img.shields.io/badge/0.0.2-orange.svg): variables and stdin (scheduled for 04 July 2019)
+- ![0.0.2](https://img.shields.io/badge/0.0.2-orange.svg): variables and stdin (_scheduled for 04 July 2019_)
 - ![0.0.3](https://img.shields.io/badge/0.0.3-red.svg): data types
