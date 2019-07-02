@@ -5,6 +5,10 @@ Documentation for the ALB Programming Language
 
 ![docs version 0.0.1](https://img.shields.io/badge/documentation%20version-0.0.1-brightgreen.svg)
 
+### Found a bug?
+
+Contact us! At alblang.project@gmail.com and we will try too fix it as soon as possible.
+
 # Table of contents
   - stdlib: ALB Standard Library.
     
