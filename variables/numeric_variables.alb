@@ -1,0 +1,106 @@
+// Variables: numeric variables
+// The ALB Programming Language
+// ALB Developers Team (C) 2019
+// This documentation software is distributed under the MIT License
+// Visit https://github.com/albpl/docs/blob/master/LICENSE for further details
+
+BEGIN
+	// In this example, we will create numeric variables and we will
+	// explore their features.
+	// Now, we will create and initialize these variables
+	var :int i 2 ;
+	var :float f 3.14 ;
+	var :hex h 5f61a0d ;
+	// (:hex, :bin and :oct variables' usage is the same, but with numbers in different bases)
+
+	// Now, we will display their respective values
+	out {
+		// $i value
+		:string "$i value: " ;
+		:var $i ;
+
+		// $f value
+		:string NEWL "$f value: " ;
+		:var $f ;
+
+		// $h value
+		// Note that the value of a hexadecimal variable or any hexadecimal integer
+		// will be by default preceded by the prefix 0x (to avoid confusing)
+		:string NEWL "$h value: " ;
+		:var $h ;
+	}
+
+	// Change values by using operations
+	$i = 2 + 1 ;
+	// $i = 3
+	
+	$f = $f - 0.43 ;
+	// $f = 2.71
+	// Also valid: $f -= 0.43 ;
+	// (explained in operators/)
+
+	$h = 8c132b8e * 162dd1a8c ;
+	// $h = c22b7d4d827e4000
+
+	// Display their new values
+	out {
+		// $i new value
+		:string NEWL NEWL "$i new value: " ;
+		:var $i ;
+
+		// $f new value
+		:string NEWL "$f new value : " ;
+		:var $f ;
+
+		// $h new value
+		:string NEWL "$h new value: " ;
+		:var $h ;
+	}
+
+	// Changing to default values: default() function
+	// This function will change a numeric variable's value to a
+	// default one (0 by default)
+
+	// Sets $i value to 0
+	$i.default() ;
+
+	// Sets $f value to 0.0
+	$f.default() ;
+
+	// Sets $h value to 0 (0x0)
+	$h.default() ;
+
+	// This function can also be used with :bin and :oct type variables (all
+	// numeric-type variables), but NOT in non-numeric variables (:string and
+	// :char)
+
+	// Display default values
+	out {
+		// $i default value
+		:string NEWL NEWL "$i default value: " ;
+		:var $i ;
+
+		// $f default value
+		:string NEWL "$f default value: " ;
+		:var $f ;
+
+		// $h default value
+		:string NEWL "$h default value: " ;
+		:var $h ;
+	}
+END
+
+// Console output:
+// $i value: 2
+// $f value: 3.14
+// $h value: 0x5f61a0d
+//
+// $i new value: 3
+// $f new value: 2.71
+// $h new value: 0xc22b7d4d827e4000
+//
+// $i default value: 0
+// $f default value: 0.0
+// $h default value: 0x0
+
+// Check README.md for further information on variables

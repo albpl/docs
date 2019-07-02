@@ -1,0 +1,51 @@
+// Variables: creating variables, interacting with them and changing their values
+// The ALB Programming Language
+// ALB Developers Team (C) 2019
+// This documentation software is distributed under the MIT License
+// Visit https://github.com/albpl/docs/blob/master/LICENSE for further details
+
+BEGIN
+	// We will create a variable of type :string and another of type :char,
+	// and we will later access to their respective values to display them.
+	// Then, we will change their values, and we will display these.
+	var :string myString "This is an example string" ;
+	var :char myChar 'c' ;
+
+	// Now, we will display their respective values, using an out function
+	// (check out docs/stdlib/stdout/)
+	out {
+		// Display value of $myString
+		:string "$myString value: " ;
+		:var $myString ;
+
+		// Display value of $myChar
+		// (use of NEWL to make output more readable)
+		:string NEWL "$myChar value: " ;
+		:var $myChar ;
+	}
+
+	// Change values
+	$myString = "My value has changed!" ;
+	$myChar = 'a' ;
+
+	// Display the changed values
+	out {
+		// Display new value of $myString
+		:string NEWL NEWL "$myString new value: " ;
+		:var $myString ;
+
+		// Display new value of $myChar
+		:string NEWL "$myChar new value: " ;
+		:var $myChar ;
+		:newline ;
+	}		
+END
+
+// Console output:
+// $myString value: This is an example string
+// $myChar value: c
+//
+// $myString new value: My value has changed!
+// $myChar new value: a
+
+// Check README.md for further information on variables
