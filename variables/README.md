@@ -1,7 +1,7 @@
 # Variables
 
 ### What is a variable?
-A variable is a storage location in the memory of our computer. It has an identificator (in programming, usually a name), and a value in that location (either known or unknown).
+A variable is a storage location in the memory of our computer. It has an identifier (in programming, usually a name), and a value in that location (either known or unknown).
 
 Variables go through several phases, which are:
 
