@@ -86,3 +86,23 @@ This function changes a numeric variable's value to a default one (0 by default)
 `$foo.default() ;`
 
 Obviating that `foo` is of type `:int`, its value would be changed to 0.
+
+### Null Initialization
+
+In case you are handling non-numeric variables, and you do not wish to give it a specific value during initialization, or in case you do not wish to give a 0 value to a numeric variable, you can use this alternative method to default().
+
+This method consists of just NOT GIVING a value to your variable during initialization. This method is the Null Initialization.
+
+In this method we will make use of the `NULL` reserved keyword.
+
+#### Usage
+
+`var :data_type identifier NULL ;`
+
+This will simply not assign a value to the variable.
+
+#### Example
+
+`var :string noValue NULL ;`
+
+Now, the `$noValue` variable will not have a value assigned to it.

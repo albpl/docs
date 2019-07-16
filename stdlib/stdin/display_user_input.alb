@@ -1,0 +1,53 @@
+// STDIN: display custom user input (stdin, stdout, variables)
+// The ALB Programming Language
+// ALB Developers Team (C) 2019
+// This documentation software is distributed under the MIT License
+// Visit https://github.com/albpl/docs/blob/master/LICENSE for further details
+
+BEGIN
+	// First of all, we will create a variable of type :string with
+	// no value assigned to it, that will later hold the value entered
+	// by the user.
+	// Go to variables/ for further information and details on variables
+	var :string input NULL ;
+
+	// Now, we will show an orientative message for the user to enter a value
+	outs "Please, enter a value: " ;
+	
+	// After this, we will call the 'in' function, which will store the value
+	// entered by the user in the variable $input
+	in $input ;
+	// The 'in' function automatically detects what type of information it is
+	// looking for, according to the variable's data type (in this case, the 'in'
+	// function would convert the user input into a string and would then store it).
+
+	// NOTE: the 'in' function also automatically prints a new line right after the
+	// user input, so other information to be displayed will appear on the next line.
+
+	// Once the variable $input has acquired a value, we can simply show its value
+	// using the 'out' method.
+	out {
+		:string "The value entered by the user is: " ;
+
+		// Now, we display $input's value
+		:var $input ;
+	}
+END
+
+// On console output, [USER INPUT n] refers to the value entered by the user,
+// that could change in different cases, being 'n' a numeric guide in case
+// more than one value was manually given.
+// Also, in examples, the text inmediately after [INSERTED], in the same line,
+// refers to a manually inserted value. This means the program will not show
+// that by default.
+// None of these two orientative messages will appear during the execution of the program.
+
+// Console output:
+// Please, enter a value: [INSERTED] [USER INPUT 1]
+// The value entered by the user is: [USER INPUT 1]
+
+// Example:
+// Please, enter a value: [INSERTED] I am using stdin!
+// The value entered by the user is: I am using stdin!
+
+// Go to README.md for more information about the stdin

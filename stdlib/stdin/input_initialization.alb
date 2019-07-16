@@ -1,0 +1,59 @@
+// STDIN: initializing variables with an input (stdin, stdout, variables)
+// The ALB Programming Language
+// ALB Developers Team (C) 2019
+// This documentation software is distributed under the MIT License
+// Visit https://github.com/albpl/docs/blob/master/LICENSE for further details
+
+BEGIN
+	// First of all, we will print an orientative message for the user to
+	// enter a value.
+	outs "Please, enter an integer: " ;
+
+	// Then, we will create a variable of type :int, that will hold
+	// a user input, with the difference with display_user_input.alb that
+	// we will not use Null Initialization this time. Instead, we will directly
+	// create the variable with the value entered by the user assigned to it.
+	var :int myInt in ;
+	// This will read an integer value from the user input in the console and will
+	// assign it to $myInt.
+
+	out {
+		:string "The value entered by the user is: " ;
+		
+		// And we will display $myInt's value
+		:var $myInt ;
+
+		// And by last, we will do some arithmetic operations
+		:string NEWL "$myInt + 1 = " ;
+		:int $myInt + 1 ;
+		
+		:string NEWL "$myInt * 10 = " ;
+		:int $myInt * 10 ;
+	}
+
+END
+
+// On console output, [USER INPUT n] refers to the value entered by the user,
+// that could change in different cases, being 'n' a numeric guide in case
+// more than one value was manually given. During the execution of the program,
+// this will change by the actual user input.
+// Also, in examples, the text inmediately after [INSERTED], in the same line,
+// refers to a manually inserted value. This means the program will not show
+// that by default.
+// And the values inmediately after [ONLY VALUE] must be interpreted as a single value,
+// usually the result of an arithmetic operation without all arguments.
+// None of these three orientative messages will appear during the execution of the program.
+
+// Console output:
+// Please, enter an integer: [INSERTED] [USER INPUT 1]
+// The value entered by the user is: [USER INPUT 1]
+// $myInt + 1 = [ONLY VALUE] [USER INPUT 1]+1
+// $myInt * 10 = [ONLY VALUE] [USER INPUT 1]*10
+
+// Example:
+// Please, enter an integer: [INSERTED] 5
+// The value entered by the user is: 5
+// $myInt + 1 = 6
+// $myInt * 10 = 50
+
+// Go to README.md for further information and details about the stdin
